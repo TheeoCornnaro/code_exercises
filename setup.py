@@ -31,7 +31,7 @@ def read_requirements(path):
 
 setup(
     name="code_exercises",
-    version=read("code_exercises", "VERSION"),
+    version=read("src/code_exercises", "VERSION"),
     description="Awesome code_exercises created by TheeoCornnaro",
     url="https://github.com/TheeoCornnaro/code_exercises/",
     long_description=read("README.md"),

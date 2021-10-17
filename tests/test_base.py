@@ -1,6 +1,6 @@
 import pytest
 
-from code_exercises import BaseClass, base_function
+from src.code_exercises import BaseClass, base_function
 
 given = pytest.mark.parametrize
 
