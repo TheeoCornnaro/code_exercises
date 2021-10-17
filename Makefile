@@ -26,16 +26,16 @@ install:          ## Install the project in dev mode.
 
 .PHONY: fmt
 fmt:              ## Format code using black & isort.
-	$(ENV_PREFIX)isort code_exercises/
-	$(ENV_PREFIX)black -l 79 code_exercises/
+	$(ENV_PREFIX)isort src/code_exercises/
+	$(ENV_PREFIX)black -l 79 src/code_exercises/
 	$(ENV_PREFIX)black -l 79 tests/
 
 .PHONY: lint
 lint:             ## Run pep8, black, mypy linters.
-	$(ENV_PREFIX)flake8 code_exercises/
-	$(ENV_PREFIX)black -l 79 --check code_exercises/
+	$(ENV_PREFIX)flake8 src/code_exercises/
+	$(ENV_PREFIX)black -l 79 --check src/code_exercises/
 	$(ENV_PREFIX)black -l 79 --check tests/
-	$(ENV_PREFIX)mypy --ignore-missing-imports code_exercises/
+	$(ENV_PREFIX)mypy --ignore-missing-imports src/code_exercises/
 
 .PHONY: test
 test: lint        ## Run tests and generate coverage report.
@@ -80,9 +80,9 @@ release:          ## Create a new tag for release.
 	@read -p "Version? (provide the next x.y.z semver) : " TAG
 	@echo "creating git tag : $${TAG}"
 	@git tag $${TAG}
-	@echo "$${TAG}" > code_exercises/VERSION
+	@echo "$${TAG}" > src/code_exercises/VERSION
 	@$(ENV_PREFIX)gitchangelog > HISTORY.md
-	@git add code_exercises/VERSION HISTORY.md
+	@git add src/code_exercises/VERSION HISTORY.md
 	@git commit -m "release: version $${TAG} 🚀"
 	@git push -u origin HEAD --tags
 	@echo "Github Actions will detect the new tag and release the new version."
@@ -101,7 +101,7 @@ switch-to-poetry: ## Switch to poetry package manager.
 	@poetry init --no-interaction --name=a_flask_test --author=rochacbruno
 	@echo "" >> pyproject.toml
 	@echo "[tool.poetry.scripts]" >> pyproject.toml
-	@echo "code_exercises = 'code_exercises.__main__:main'" >> pyproject.toml
+	@echo "code_exercises = 'src/code_exercises.__main__:main'" >> pyproject.toml
 	@cat requirements.txt | while read in; do poetry add --no-interaction "$${in}"; done
 	@cat requirements-test.txt | while read in; do poetry add --no-interaction "$${in}" --dev; done
 	@poetry install --no-interaction

@@ -2,4 +2,4 @@ FROM python:3.7-alpine
 COPY . /app
 WORKDIR /app
 RUN pip install .
-CMD ["code_exercises"]
+CMD ["src/code_exercises"]

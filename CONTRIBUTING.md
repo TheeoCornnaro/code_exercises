@@ -9,7 +9,7 @@ This instructions are for linux base systems. (Linux, MacOS, BSD, etc.)
 
 - On github interface click on `Fork` button.
 - Clone your fork of this repo. `git clone git@github.com:YOUR_GIT_USERNAME/code_exercises.git`
-- Enter the directory `cd code_exercises`
+- Enter the directory `cd src/code_exercises`
 - Add upstream repo `git remote add upstream https://github.com/TheeoCornnaro/code_exercises`
 
 ## Setting up your own virtual environment
