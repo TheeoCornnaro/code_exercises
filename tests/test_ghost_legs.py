@@ -122,3 +122,7 @@ def test_ghost_legs(monkeypatch, capfd, input, output):
         ghost_legs()
     out, err = capfd.readouterr()
     assert out == output
+
+
+if __name__ == '__main__':
+    pytest.main()

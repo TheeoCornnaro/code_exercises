@@ -16,3 +16,7 @@ def test_base_function():
 
 def test_base_class():
     assert BaseClass().base_method() == "hello from BaseClass"
+
+
+if __name__ == '__main__':
+    pytest.main()
