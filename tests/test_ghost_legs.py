@@ -1,6 +1,6 @@
 import pytest
 import mock
-from src.code_exercises.ghost_legs import ghost_legs
+from src.code_exercises import ghost_legs
 
 
 test_samples = [
