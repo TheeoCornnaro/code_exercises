@@ -117,7 +117,7 @@ test_samples = [
 
 # Test
 @ pytest.mark.parametrize('input, output', test_samples)
-def test_ghost_legs2(monkeypatch, capfd, input, output):
+def test_ghost_legs(monkeypatch, capfd, input, output):
     with mock.patch('builtins.input', side_effect=input):
         ghost_legs()
     out, err = capfd.readouterr()
