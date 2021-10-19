@@ -15,8 +15,8 @@ A  B  C
 1  2  3
 
 To play the game, a player chooses a line in the top and follow it downwards.
-When a horizontal connector is encountered, he must follow the connector to 
-turn to another vertical line and continue downwards. Repeat this until 
+When a horizontal connector is encountered, he must follow the connector to
+turn to another vertical line and continue downwards. Repeat this until
 reaching the bottom of the diagram.
 
 In the example diagram, when you start from A, you will end up in 2. Starting
@@ -46,15 +46,14 @@ All diagrams are having the same style as the test cases.
 ** Output **
 
 List all connected pairs between top and bottom labels, TB, in the order of the
-top labels from Left to Right. Write each pair in a 
-separate line.
+top labels from Left to Right. Write each pair in a separate line.
 
 ** Constraints **
 
 3 < W, H ≤ 100
 
-ASCII characters used in the top and bottom labels are in range of Hex 21 to Hex 7E, inclusive
-
+ASCII characters used in the top and bottom labels are in range of Hex 21 to
+Hex 7E, inclusive
 """
 
 
