@@ -18,7 +18,7 @@ available letters (1 to 7 letters).
 In Scrabble©, each letter is weighted with a score depending on how difficult
 it is to place that letter in a word. You will see below a table showing the
 points corresponding to each letter:
- 
+
 
 Letters	Points
 e, a, i, o, n, r, t, l, s, u	1
@@ -35,7 +35,6 @@ program must find the word in the dictionary which wins the most points for
 the seven given letters (a letter can only be used once). If two words win
 the same number of points, then the word which appears first in the order of
 the given dictionary should be chosen.
- 
 
 All words will only be composed of alphabetical characters in lower case.
 There will always be at least one possible word.
@@ -50,9 +49,10 @@ def scrabble_input():
 
 
 def scrabble_score(word, letters):
-    values = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2, "f": 4, "i": 1, "h": 4,
-              "k": 5, "j": 8, "m": 3, "l": 1, "o": 1, "n": 1, "q": 10, "p": 3, "s": 1,
-              "r": 1, "u": 1, "t": 1, "w": 4, "v": 4, "y": 4, "x": 8, "z": 10}
+    values = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2, "f": 4,
+              "i": 1, "h": 4, "k": 5, "j": 8, "m": 3, "l": 1, "o": 1,
+              "n": 1, "q": 10, "p": 3, "s": 1, "r": 1, "u": 1, "t": 1,
+              "w": 4, "v": 4, "y": 4, "x": 8, "z": 10}
 
     FilteredValues = {k: v for (k, v) in values.items() if k in letters}
     result = 0

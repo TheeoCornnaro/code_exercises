@@ -1,4 +1,4 @@
-from src.code_exercises.algorithms import ghost_legs
+from src.code_exercises.algorithms.ghost_legs import ghost_legs
 from pathlib import Path
 import json
 import pytest

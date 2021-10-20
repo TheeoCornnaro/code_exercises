@@ -1,4 +1,4 @@
-from src.code_exercises.algorithms import scrabble
+from src.code_exercises.algorithms.scrabble import scrabble
 from pathlib import Path
 import json
 import pytest
